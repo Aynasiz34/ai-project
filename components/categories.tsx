@@ -10,7 +10,7 @@ interface CategoriesProps {
   data: Category[];
 }
 
-const Categories: React.FC<CategoriesProps> = ({ data }) => {
+const Categories = ({ data }: CategoriesProps) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
