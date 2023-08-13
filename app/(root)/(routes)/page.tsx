@@ -1,10 +1,15 @@
-import { Menu } from "lucide-react";
+import Categories from "@/components/categories";
+import SearchInput from "@/components/search-input";
+import prismadb from "@/lib/prismadb";
 
-export default function Home() {
+const RootPage = async () => {
+  const categories = await prismadb.category.findMany();
   return (
-    <div className="text-green-500 text-3xl">
-      <Menu />
-      Hello AI Companion
+    <div className="h-full p-4 space-y-2">
+      <SearchInput />
+      <Categories data={categories} />
     </div>
   );
-}
+};
+
+export default RootPage;
