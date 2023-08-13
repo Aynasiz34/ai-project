@@ -245,8 +245,8 @@ const CompanionForm = ({ initialData, categories }: CompanionFormProps) => {
                   />
                 </FormControl>
                 <FormDescription>
-                  Describe in detail your companion&apos;s backstory and
-                  relevant details
+                  Write couple of examples of a human chatting with your AI
+                  companion, write expected answers.
                 </FormDescription>
                 <FormMessage />
               </FormItem>
